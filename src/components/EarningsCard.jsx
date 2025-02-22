@@ -17,7 +17,7 @@ const EarningsCard = ({ title, value, icon, bgcolor }) => {
     >
       <CardContent>
         <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-          {icon} {/* Now accepts a React component instead of a string */}
+          {icon} 
         </div>
         <Typography variant="h4" fontWeight={600} mt={1}>{value}</Typography>
         <Typography variant="h6" color="#3F59A3" fontWeight={700}>{title}</Typography>

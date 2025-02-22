@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Typography, Paper, Link } from "@mui/material";
 import LinkIcon from "@mui/icons-material/Link"; // Import Link icon
+import FiberNewIcon from '@mui/icons-material/FiberNew';
 
 const Updates = () => {
   return (

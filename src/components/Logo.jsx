@@ -1,11 +1,8 @@
-import React from "react";
-
 const Logo = () => {
-  return (
-    <div style={{ position: "relative", display: "inline-block" }}>
+    return (
       <svg
-        width="51"
-        height="51"
+        width="40" // Adjust to match MUI icon size
+        height="40"
         viewBox="0 0 51 51"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -28,8 +25,8 @@ const Logo = () => {
           </linearGradient>
         </defs>
       </svg>
-    </div>
-  );
-};
-
-export default Logo;
+    );
+  };
+  
+  export default Logo;
+  
