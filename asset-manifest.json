@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Dealer-Dashboard/static/css/main.f855e6bc.css",
+    "main.js": "/Dealer-Dashboard/static/js/main.55228be1.js",
+    "static/js/453.d1ead18a.chunk.js": "/Dealer-Dashboard/static/js/453.d1ead18a.chunk.js",
+    "index.html": "/Dealer-Dashboard/index.html",
+    "main.f855e6bc.css.map": "/Dealer-Dashboard/static/css/main.f855e6bc.css.map",
+    "main.55228be1.js.map": "/Dealer-Dashboard/static/js/main.55228be1.js.map",
+    "453.d1ead18a.chunk.js.map": "/Dealer-Dashboard/static/js/453.d1ead18a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.55228be1.js"
+  ]
+}
