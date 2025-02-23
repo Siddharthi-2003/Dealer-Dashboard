@@ -6,7 +6,7 @@ import MedicalServicesRoundedIcon from "@mui/icons-material/MedicalServicesRound
 import HeadsetMicRoundedIcon from "@mui/icons-material/HeadsetMicRounded";
 import CampaignRoundedIcon from "@mui/icons-material/CampaignRounded";
 import { useNavigate, useLocation } from "react-router-dom";
-import profile from "../assets/Group 1000005056.png"; // Logo
+import profile from "../assets/Group 1000005056.png"; 
 
 const Sidebar = ({ scrollToFAQs }) => {
   const navigate = useNavigate();
@@ -22,7 +22,7 @@ const Sidebar = ({ scrollToFAQs }) => {
 
   const sidebarContent = (
     <Box sx={{ width: 250, bgcolor: "#f8f9fa", height: "100vh" }}>
-      {/* Sidebar Header */}
+     
       <Box sx={{ p: 2, textAlign: "center" }}>
         <img
           src={profile}
@@ -41,7 +41,7 @@ const Sidebar = ({ scrollToFAQs }) => {
         <Typography variant="body2" color="gray">dealer@example.com</Typography>
       </Box>
 
-      {/* Sidebar Menu */}
+     
       <List>
         <ListItemButton onClick={() => navigate("/")} sx={{ bgcolor: location.pathname === "/" ? "#E6EDFF" : "transparent", borderRadius: "8px" }}>
           <ListItemIcon><HomeRoundedIcon color="primary" /></ListItemIcon>
@@ -68,14 +68,14 @@ const Sidebar = ({ scrollToFAQs }) => {
 
   return (
     <>
-      {/* Mobile Menu Button */}
+      
       {isMobile && (
         <IconButton onClick={toggleDrawer(true)} sx={{ position: "absolute", top: 16, left: 16, zIndex: 1300 }}>
           <MenuIcon />
         </IconButton>
       )}
 
-      {/* Sidebar Drawer */}
+      
       <Drawer
         variant={isMobile ? "temporary" : "permanent"}
         open={isMobile ? open : true}

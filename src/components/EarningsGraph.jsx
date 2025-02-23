@@ -11,13 +11,13 @@ import {
   Legend
 } from "chart.js";
 
-// Register Chart.js components
+
 ChartJS.register(LineElement, PointElement, LinearScale, CategoryScale, Tooltip, Legend);
 
 const EarningsGraph = () => {
   const [view, setView] = useState("monthly");
 
-  // Mock Earnings Data
+  
   const earningsData = {
     daily: {
       labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
@@ -33,15 +33,15 @@ const EarningsGraph = () => {
     }
   };
 
-  // State for chart data
+  
   const [chartData, setChartData] = useState({
     labels: earningsData[view].labels,
     datasets: [
       {
         label: "Earnings (₹)",
         data: earningsData[view].data,
-        backgroundColor: "rgba(0, 167, 111, 0.1)", // Light green fill
-        borderColor: "#00A76F", // Green line
+        backgroundColor: "rgba(0, 167, 111, 0.1)", 
+        borderColor: "#00A76F", 
         borderWidth: 2,
         tension: 0.4,
         pointRadius: 4,
@@ -51,7 +51,7 @@ const EarningsGraph = () => {
     ]
   });
 
-  // Update chart when view changes
+ 
   useEffect(() => {
     setChartData({
       labels: earningsData[view].labels,
@@ -90,7 +90,7 @@ const EarningsGraph = () => {
           </FormControl>
         </Box>
 
-        {/* Line Chart */}
+      
         <Box sx={{ flexGrow: 1, mt: 2 }}>
           <Line data={chartData} options={{ responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { grid: { display: false } }, y: { grid: { display: false }, beginAtZero: true } } }} />
         </Box>

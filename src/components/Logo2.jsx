@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import Logo2 from "./Logo2"; // Adjust the path if needed
+import Logo2 from "./Logo2"; 
 
 const Dashboard = () => {
   return (
@@ -18,10 +18,10 @@ const Dashboard = () => {
         gap: 1,
       }}
     >
-      {/* Logo2 as an icon */}
+      
       <Logo2 fontSize="large" sx={{ fontSize: 48 }} />
 
-      {/* Earnings amount */}
+      
       <Typography
         sx={{
           fontSize: 28,

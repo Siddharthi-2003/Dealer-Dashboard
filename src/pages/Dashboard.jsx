@@ -33,12 +33,12 @@ const Dashboard = () => {
       <Box sx={{ flexGrow: 1, p: isMobile ? 2 : 4 }}>
         <Header />
 
-        {/* Stats Section */}
+        
         <Stack spacing={2} direction={isMobile ? "column" : "row"} mt={3}>
           <EarningsCard title="Total Sellers" value="4" icon={<Logo />} bgcolor="#E6EDFF" />
           <EarningsCard title="Total Earnings" value="₹ 3.23K" icon={<ShowChartOutlinedIcon sx={{ width: 40, height: 40, color: "orange" }} />} bgcolor="#FFF9F2" />
 
-          {/* Dealer Code Card */}
+          
           <Card
             sx={{
               flex: 1,
@@ -77,7 +77,7 @@ const Dashboard = () => {
             </Button>
           </Card>
 
-          {/* Download Dealer Agreement Card - Updated */}
+          
           <Card
             sx={{
               flex: 1,
@@ -115,7 +115,7 @@ const Dashboard = () => {
             </Button>
           </Card>
 
-          {/* Updated Personal Details Card */}
+         
           <Card
             sx={{
               flex: 1,
@@ -154,7 +154,7 @@ const Dashboard = () => {
           </Card>
         </Stack>
 
-        {/* Invite Seller Modal */}
+        
         <Modal open={openInvite} onClose={() => setOpenInvite(false)}>
           <Paper
             sx={{

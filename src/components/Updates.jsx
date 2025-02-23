@@ -14,10 +14,10 @@ const Updates = () => {
           mt: 1,
           borderRadius: "10px",
           background: "#F1F4FF",
-          position: "relative", // Needed to position the icon
+          position: "relative", 
         }}
       >
-        {/* Link Icon at the top right */}
+        
         <Link
           href="#"
           sx={{
@@ -44,10 +44,10 @@ const Updates = () => {
           mt: 3,
           borderRadius: "10px",
           background: "#F1F4FF",
-          position: "relative", // Needed to position the icon
+          position: "relative", 
         }}
       >
-        {/* Link Icon at the top right */}
+        
         <Link
           href="#"
           sx={{

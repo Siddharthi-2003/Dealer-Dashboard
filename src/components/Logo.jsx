@@ -1,7 +1,7 @@
 const Logo = () => {
     return (
       <svg
-        width="40" // Adjust to match MUI icon size
+        width="40" 
         height="40"
         viewBox="0 0 51 51"
         fill="none"

@@ -14,7 +14,7 @@ const SellerTable = () => {
       <TableContainer component={Paper} sx={{ width: "100%", height: "90%" }}>
         <Table>
           <TableHead>
-            <TableRow sx={{ height: "60px" }}> {/* Increased header row height */}
+            <TableRow sx={{ height: "60px" }}>
               <TableCell sx={{ fontWeight: "bold" }}>Seller Name</TableCell>
               <TableCell sx={{ fontWeight: "bold" }}>Your Shares</TableCell>
               <TableCell sx={{ fontWeight: "bold" }}>Earning History</TableCell>
@@ -22,7 +22,7 @@ const SellerTable = () => {
           </TableHead>
           <TableBody>
             {sellers.map((seller, index) => (
-              <TableRow key={index} sx={{ height: "70px" }}> {/* Increased row height */}
+              <TableRow key={index} sx={{ height: "70px" }}>
                 <TableCell sx={{ paddingY: 5 }}>{seller.name}</TableCell>
                 <TableCell sx={{ paddingY: 5 }}>{seller.shares}</TableCell>
                 <TableCell sx={{ paddingY: 5 }}>

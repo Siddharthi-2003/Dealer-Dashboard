@@ -47,14 +47,14 @@ const SellerList = () => {
       <Box sx={{ flexGrow: 1, p: 3, bgcolor: "#ffffff" }}>
         <Header />
 
-        {/* Title */}
+     
         <Typography variant="h5" fontWeight="bold" sx={{ mb: 2 }}>
           Sellers
         </Typography>
 
-        {/* Search Bar with Sort and Download Buttons */}
+        
         <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", mb: 2 }}>
-          {/* Search Bar */}
+    
           <TextField
             placeholder="Search via seller name"
             variant="outlined"
@@ -68,7 +68,6 @@ const SellerList = () => {
             }}
           />
 
-          {/* Right-Aligned Buttons */}
           <Box sx={{ display: "flex", gap: 1 }}>
             <IconButton color="primary">
               <ArrowDownwardIcon />
@@ -77,14 +76,13 @@ const SellerList = () => {
               variant="contained"
               color="primary"
               startIcon={<DownloadIcon />}
-              onClick={() => setOpen(true)} // Open popup
+              onClick={() => setOpen(true)} 
             >
               Download
             </Button>
           </Box>
         </Box>
 
-        {/* Seller List Table */}
         <TableContainer component={Paper}>
           <Table>
             <TableHead sx={{ bgcolor: "#f5f5f5" }}>
@@ -116,7 +114,7 @@ const SellerList = () => {
           </Table>
         </TableContainer>
 
-        {/* Download Dialog */}
+       
         <Dialog open={open} onClose={() => setOpen(false)} maxWidth="sm" fullWidth>
           <DialogTitle sx={{ fontWeight: "bold" }}>Download Report</DialogTitle>
           <DialogContent>
@@ -126,7 +124,7 @@ const SellerList = () => {
               <Tab label="Custom Range" />
             </Tabs>
 
-            {/* Monthly Report */}
+          
             {tab === 0 && (
               <Box sx={{ mt: 2 }}>
                 <Typography>Select the month for which you want to download the report.</Typography>
@@ -141,7 +139,7 @@ const SellerList = () => {
               </Box>
             )}
 
-            {/* Yearly Report */}
+            
             {tab === 1 && (
               <Box sx={{ mt: 2 }}>
                 <Typography>Select the year for which you want to download the report.</Typography>
@@ -156,7 +154,7 @@ const SellerList = () => {
               </Box>
             )}
 
-            {/* Custom Range */}
+         
             {tab === 2 && (
               <Box sx={{ mt: 2 }}>
                 <Typography>Select a custom date range for your report.</Typography>

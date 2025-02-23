@@ -23,7 +23,7 @@ const Header = () => {
       sx={{ bgcolor: "white", color: "black", boxShadow: "none", borderBottom: "1px solid #ddd" }}
     >
       <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-        {/* Left Side: Title */}
+        
         <Typography
           variant="h6"
           sx={{
@@ -38,7 +38,7 @@ const Header = () => {
           Dashboard
         </Typography>
 
-        {/* Right Side: Icons & Profile */}
+        
         <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
           <IconButton>
             <NotificationsIcon />
@@ -85,7 +85,8 @@ const Header = () => {
           </Box>
         </Box>
 
-        {/* Profile Menu */}
+        
+        
         <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
           <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
           <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
