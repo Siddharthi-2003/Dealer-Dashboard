@@ -16,7 +16,8 @@ import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 
 const Dashboard = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
   const faqRef = useRef(null);
   const [openInvite, setOpenInvite] = useState(false);
 
@@ -27,24 +28,22 @@ const Dashboard = () => {
   };
 
   return (
-    <Box sx={{ display: "flex", bgcolor: "white", minHeight: "100vh" }}>
+    <Box sx={{ display: "flex", bgcolor: "white", minHeight: "100vh", flexDirection: isMobile ? "column" : "row" }}>
       <Sidebar scrollToFAQs={scrollToFAQs} />
 
       <Box sx={{ flexGrow: 1, p: isMobile ? 2 : 4 }}>
         <Header />
 
-        {/* Stats Section */}
-        <Stack spacing={2} direction={isMobile ? "column" : "row"} mt={3}>
+        <Stack spacing={2} direction={isMobile ? "column" : isTablet ? "column" : "row"} mt={3}>
           <EarningsCard title="Total Sellers" value="4" icon={<Logo />} bgcolor="#E6EDFF" />
           <EarningsCard title="Total Earnings" value="₹ 3.23K" icon={<ShowChartOutlinedIcon sx={{ width: 40, height: 40, color: "orange" }} />} bgcolor="#FFF9F2" />
 
-          {/* Dealer Code Card */}
           <Card
             sx={{
               flex: 1,
               textAlign: "center",
               alignItems: "center", 
-    justifyContent: "center",
+              justifyContent: "center",
               p: 2,
               display: "flex",
               flexDirection: "column",
@@ -53,31 +52,20 @@ const Dashboard = () => {
               "&:hover": { border: "1px solid #00A533" }
             }}
           >
-             <AddCircleOutlineIcon
-              sx={{
-                fontSize: 60,
-                color: "#FFEACC",
-                mb: 1,
-                alignContent:"centre"
-              }}
-            />
-            <Typography variant="h6" fontWeight={600} sx={{color:"#3F59A3"}}>
+            <AddCircleOutlineIcon sx={{ fontSize: 60, color: "#FFEACC", mb: 1 }} />
+            <Typography variant="h6" fontWeight={600} sx={{ color: "#3F59A3" }}>
               Dealer Code: ID2012
             </Typography>
             <Button
               variant="contained"
               color="warning"
-              sx={{
-                mt: "auto",
-                "&:hover": { backgroundColor: "#FFA726" }
-              }}
+              sx={{ mt: "auto", "&:hover": { backgroundColor: "#FFA726" } }}
               onClick={() => setOpenInvite(true)}
             >
               Invite Seller
             </Button>
           </Card>
 
-          {/* Download Dealer Agreement Card - Updated */}
           <Card
             sx={{
               flex: 1,
@@ -104,61 +92,18 @@ const Dashboard = () => {
             </Typography>
             <Button
               variant="outlined"
-              sx={{
-                mt: "auto",
-                color: "#FF9800",
-                borderColor: "#FF9800",
-                "&:hover": { borderColor: "#E68900", color: "#E68900" }
-              }}
+              sx={{ mt: "auto", color: "#FF9800", borderColor: "#FF9800", "&:hover": { borderColor: "#E68900", color: "#E68900" } }}
             >
               Download
             </Button>
           </Card>
-
-          {/* Updated Personal Details Card */}
-          <Card
-            sx={{
-              flex: 1,
-              textAlign: "left",
-              p: 2,
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              minHeight: "150px",
-              backgroundColor: "#E9FFF0",
-              boxShadow: "0px 7.39px 14.78px -2.46px rgba(145, 158, 171, 0.12)",
-              borderRadius: "6.5px",
-              "&:hover": { border: "1px solid #00A533" }
-            }}
-          >
-            <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <Typography variant="h6" fontWeight={600} sx={{ color: "#00C53C", width: "300px", size: "16px" }}>
-                Personal Details
-              </Typography>
-              <PersonOutlineRoundedIcon sx={{ color: "#00C53C", fontSize: 50 }} />
-            </Box>
-            <Typography sx={{ fontSize: "14px", lineHeight: "21px", color: "#A1A1A1", mt: 1 }}>
-              View personal details and update your profile picture here.
-            </Typography>
-            <Button
-              variant="outlined"
-              sx={{
-                mt: "auto",
-                color: "#3F59A3",
-                borderColor: "#3F59A3",
-                "&:hover": { borderColor: "#1E3D8A", color: "#1E3D8A" }
-              }}
-            >
-              View Profile
-            </Button>
-          </Card>
         </Stack>
 
-        {/* Invite Seller Modal */}
         <Modal open={openInvite} onClose={() => setOpenInvite(false)}>
           <Paper
             sx={{
-              width: "400px",
+              width: "90%",
+              maxWidth: "400px",
               p: 3,
               position: "absolute",
               top: "50%",
